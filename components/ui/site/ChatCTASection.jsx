@@ -28,6 +28,7 @@ export default function ChatCTASection({
                     </p>
                     <div className="flex justify-center">
                         <button
+                            data-aos="fade-right"
                             onClick={onClick}
                             className="inline-flex items-center justify-center gap-2 rounded-full brandBg px-5 py-2.5 text-sm font-semibold text-neutral-900 transition hover:brandBg focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                         >

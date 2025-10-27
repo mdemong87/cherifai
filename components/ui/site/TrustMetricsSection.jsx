@@ -2,6 +2,7 @@
 
 import Container from "@/components/layout/sitelayout/Container";
 import { AlertTriangle, BadgeCheck, Home, ShieldCheck, Star } from "lucide-react";
+import CountUp from "react-countup";
 
 /**
  * TrustMetricsSection.jsx
@@ -48,10 +49,10 @@ export default function TrustMetricsSection({
     const statItems = stats?.length
         ? stats
         : [
-            { id: "value", value: "$2.5B+", label: "Properties Analyzed" },
-            { id: "deals", value: "50,000+", label: "Successful Deals" },
-            { id: "years", value: "25+", label: "Years Experience" },
-            { id: "uptime", value: "99.9%", label: "Uptime Guarantee" },
+            { id: "value", value: "200000", label: "Properties Analyzed" },
+            { id: "deals", value: "408676", label: "Successful Deals" },
+            { id: "years", value: "234345", label: "Years Experience" },
+            { id: "uptime", value: "987865", label: "Uptime Guarantee" },
         ];
 
     return (
@@ -68,7 +69,7 @@ export default function TrustMetricsSection({
                     {/* Badges Row */}
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {badgeItems.map(({ id, title, desc, Icon }) => (
-                            <div
+                            <div data-aos="zoom-in"
                                 key={id}
                                 className="rounded-2xl myborder bg-neutral-900 p-6 text-center shadow-md ring-1 ring-inset ring-neutral-800"
                             >
@@ -86,7 +87,12 @@ export default function TrustMetricsSection({
                         {statItems.map(({ id, value, label }) => (
                             <div key={id} className="text-center">
                                 <div className="text-4xl sm:text-5xl font-extrabold brandColor">
-                                    {value}
+
+                                    <CountUp
+                                        start={0}
+                                        end={value}
+                                        duration={10}
+                                    />
                                 </div>
                                 <div className="mt-2 text-sm text-neutral-300">{label}</div>
                             </div>
@@ -97,7 +103,7 @@ export default function TrustMetricsSection({
                     <div className="mt-12 rounded-2xl border border-yellow-900/80 bg-gradient-to-b from-yellow-900/30 to-yellow-900/20 p-5 sm:p-6 ring-1 ring-inset ring-yellow-900/30">
                         <div className="flex items-start gap-3">
                             <div className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 ring-1 ring-inset ring-yellow-900/40">
-                                <AlertTriangle className="h-4 w-4 text-yellow-300" />
+                                <AlertTriangle className="h-4 w-4 text-yellow-300 herostartAnimation" />
                             </div>
                             <div className="flex-1">
                                 <div className="font-semibold text-yellow-200">{disclaimerTitle}</div>

@@ -27,6 +27,7 @@ export default function FreeTrialCTASection({
                     </p>
                     <div className="flex justify-center">
                         <button
+                            data-aos="fade-right"
                             onClick={onClick}
                             className="inline-flex items-center justify-center gap-2 rounded-md brandBg px-5 py-2.5 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                         >

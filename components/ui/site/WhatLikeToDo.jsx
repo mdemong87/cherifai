@@ -93,7 +93,7 @@ export default function WhatLikeToDo({
                     </div>
 
                     {/* Heading */}
-                    <div className="mt-6 text-center">
+                    <div data-aos="fade-down" className="mt-6 text-center">
                         <h2 className="text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
                             {heading}
                         </h2>
@@ -116,9 +116,11 @@ export default function WhatLikeToDo({
 
 function FeatureCard({ id, title, blurb, bullets, Icon, onLaunch }) {
     return (
-        <div className="group relative rounded-2xl myborder bg-neutral-900 p-5 shadow-lg transition hover:shadow-xl hover:shadow-teal-900/20">
+        <div data-aos="zoom-in" className="group relative rounded-2xl myborder bg-neutral-900 p-5 shadow-lg transition hover:shadow-xl hover:shadow-teal-900/20">
             {/* Glow ring */}
             <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-neutral-800 group-hover:ring-teal-600/60"></div>
+
+
 
             {/* Icon chip */}
             <div className="inline-flex items-center justify-center rounded-xl bg-neutral-800 p-3 myborder ring-1 ring-inset ring-neutral-800">
